@@ -1,0 +1,15 @@
+{% block content %}
+    
+        <form method="POST">
+            {% csrf_token %}
+            <legend>Log In</legend><br><br>
+            {% for fm in form %}
+            {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br><br>
+            {% endfor %}
+            <button  type="submit">Login</button>
+            
+        </form>
+        
+                Need An Account? <a  href="{% url 'signup' %}">signup</a>
+           
+{% endblock content %}

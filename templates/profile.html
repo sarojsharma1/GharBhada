@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>user profile</title>
+
+</head>
+
+<body>
+<br>
+<a href="/">Home</a>
+<a href="rentlist">Find Rent</a>
+<a href=" ">Give Rent</a>
+<a href='{% url 'contact' %}'>Contact us</a>
+<br><br><br>
+
+<h> Welcome to Profile Page !!!</h>
+
+<br><br>
+
+{% if user.profile.image %} 
+ <img src="{{user.profile.image.url}}" height=300 width=300><br>  
+{% else %}
+ <h1> No Image </h1>
+{% endif %}
+
+<form action="" method='POST' enctype="multipart/form-data">
+{% csrf_token %}
+
+{{u_form.as_p}}
+{{p_form.as_p}}
+
+<input type='submit' value='Update'>
+</form>
+<br><br>
+<a href='{% url 'changepass' %}'>Change Password</a>
+<a href='{% url 'logout' %}'>logout</a>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>user login</title>
+
+<style>
+.err{
+  color:red;
+}
+</style>
+
+</head>
+
+
+<body>
+<br>
+<a href="/">Home</a>
+<a href="rentlist">Find Rent</a>
+<a href="login">Give Rent</a>
+<a href="contact">Contact us</a>
+<br><br><br>
+
+<h>Login</h><br><br>
+<form action="" method="POST" novalidate>
+{% csrf_token %}
+
+<br>
+{% for fm in form %}
+  {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br><br>
+{% endfor %}
+
+{% if form.non_field_errors %}
+  {% for error in form.non_field_errors %}
+ <p class='err'> {{error}} </p>
+  {% endfor %}
+{% endif %}
+
+<input type='submit' value='Submit'>
+</form>
+<a href="{% url 'signup' %}">signup </a>
+</body>
+
+</html>

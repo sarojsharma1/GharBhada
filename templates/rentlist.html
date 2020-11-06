@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+
+<title> </title>
+
+</head>
+
+
+<body>
+
+<br>
+<a href="/">Home</a>
+<a href="rentlist">Find Rent</a>
+<a href="profile">Give Rent</a>
+<a href="contact">Contact us</a>
+<br><br>
+
+<h> Find Rent Online!!! </h>
+<b><br><br>
+
+{% if users %}
+ 
+  {% for user in users %}
+
+    {%if user.profile.image %} 
+      <img src="{{user.profile.image.url }}" height=300 width=300><br>  
+    {% else %}
+      <h1> No Image </h1>
+    {% endif %}
+
+   <label>Room Number</label>
+   <li><label>Hall:</label>{{user.profile.HallNum}}<br></li>
+   <li><label>Bed:</label>{{user.profile.BedNum}}<br></li>
+   <li><label>kitchen:</label>{{user.profile.kitchenNum}}<br></li>
+   
+   <label>Location: </label>{{user.profile.Location}}<br>
+   <label>Contact no: </label>{{user.profile.Contactno}}<br>
+   <label>Rs </label>{{user.profile.RentCost}}
+   <br><br><br><br>   
+  
+  {% endfor %} 
+{% else %}
+   <h1> No data </h1>
+{% endif %}
+
+</body>
+
+</html>
