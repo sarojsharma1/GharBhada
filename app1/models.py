@@ -15,4 +15,4 @@ class Profile(models.Model):
     #Facility = models.CharField(blank=True,max_length=200)
    
     
- 
+#https://www.gharjagganepal.com/properties/5406-House-Aagaman-Tole-Ward-no-13-Chandragiri-Municipality-Kathmandu-Bagmati-Nepal/?fbclid=IwAR2ne1--r3SekQXZccvNY2cqRVSLoN18ywJLiK22FfGLWeZ1Ve9EZsW0fDI

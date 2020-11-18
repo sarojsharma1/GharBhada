@@ -25,7 +25,7 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['Contactno','image','HallNum','BedNum','kitchenNum','Location','RentCost']
-        labels = {'Contactno':'Contact no.','HallNum':'Hall Number','RentCost':'Rent Cost','BedNum':'Bed Number','kitchenNum':'Kitchen Number'} 
+        labels = {'Contactno':'Contact no.','HallNum':'Living Room','RentCost':'Rent Cost','BedNum':'Bed Room','kitchenNum':'Kitchen'} 
 '''
     def clean(self):
         cleaned_data = super().clean()    
