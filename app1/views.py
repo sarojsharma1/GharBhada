@@ -61,12 +61,17 @@ def profile(request):
 
     return render(request, 'profile.html', context)   
 
+def contactus(request):
+    return render(request,'contact.html')  
+
+
 
 def changepassword(request):
     pass
 
-def contactus(request):
-    return render(request,'contact.html')
+def userlogout(request):
+    logout(request)
+    return HttpResponseRedirect('/login')   
 
 '''
 def userlogin(request):
