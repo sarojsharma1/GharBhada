@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'website.urls'
+ROOT_URLCONF = 'GharBhada.urls'
 
 Templates_dir = os.path.join(BASE_DIR,'templates')
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'website.wsgi.application'
+WSGI_APPLICATION = 'GharBhada.wsgi.application'
 
 
 # Database
