@@ -72,18 +72,29 @@
   </div>
 </nav>
    
+<div class='container-fluid' >
+  <div class='row'>
+    <div class='col-md-4 col-sm-4 col-xs-12'></div>
+<form method="POST">
 
-     <form method="POST">
-
+            
+            <input type="hidden" name="csrfmiddlewaretoken" value="2Sl8HMsg3uL3zR8X4qMxo2urg0TCwrHTwCWjwmNI9fNpABQSDj8gHAFJdf1CgP9q">
             {% csrf_token %}
             <legend>Log In</legend><br><br>
-            {% for fm in form %}
-            {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}<br><br>
-            {% endfor %}
-            <button  type="submit">Login</button>   
-     </form>
+            
+            <label for="id_username">Username:</label><input type="text" class='form-control' name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"><br><br>
+            
+            <label for="id_password">Password:</label><input type="password" class='form-control' name="password" autocomplete="current-password" required="" id="id_password"><br><br>
+            
+            <button type="submit">Login</button> 
+            Need An Account? <a  href="{% url 'signup' %}">signup</a>  
+</form> 
+           
+   </div>  
+    
+</div>
         
-     Need An Account? <a  href="{% url 'signup' %}">signup</a>
+     
 
 
 </body>    

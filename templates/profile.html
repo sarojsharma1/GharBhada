@@ -79,23 +79,45 @@
   </button>
 </div>
 
+
+<h2 class="label label-info">Rent Details!!!</h2>
+
+
 <br>
-<div class="container">
+<div class='container-fluid'>
+   
+   <div class='row'>
+     <div class='col-md-4 col-sm-4 col-xs-12'>
+
+
+<form action="" method="POST" enctype="multipart/form-data">
+  <div class="form-group">
+<input type="hidden" name="csrfmiddlewaretoken" value="9O3IEhyTMmtkSPSy4fYieVP6pQYSLMS4DyETtRTlS7vGTzAtD8k1xt0om56SvakB">
+{% csrf_token %}
+
 {% if user.profile.image %} 
  <img src="{{user.profile.image.url}}" class="img-fluid" alt="Responsive image" height=500 width=500><br>  
 {% else %}
  <h1> No Image </h1>
 {% endif %}
-<br><br>
-<form action="" method='POST' enctype="multipart/form-data">
-{% csrf_token %}
 
-{{u_form.as_p}}
-{{p_form.as_p}}
+<p><label for="id_image">Image:</label> <input type="file" class='form-control' name="image" accept="image/*" id="id_image"></p>
+<p><label for="id_HallNum">Living Room:</label> <input type="number" class='form-control' name="HallNum" value="1" required="" id="id_HallNum"></p>
+<p><label for="id_BedNum">Bed Room:</label> <input type="number" class='form-control' name="BedNum" value="1" required="" id="id_BedNum"></p>
+<p><label for="id_kitchenNum">Kitchen:</label> <input type="number" class='form-control' name="kitchenNum" value="1" required="" id="id_kitchenNum"></p>
+<p><label for="id_Location">Location:</label> <input type="text" class='form-control' name="Location" value="Lalitpur,Bhaisepati" maxlength="50" required="" id="id_Location"></p>
+<p><label for="id_RentCost">Rent Cost:</label> <input type="number" class='form-control' name="RentCost" value="4000" required="" id="id_RentCost"></p>
 
-<input type='submit' value='Update'>
-<a href='{% url 'logout' %}'>Logout</a>
+<p><label for="id_username">Username:</label> <input type="text" class='form-control' name="username" value="sabina" maxlength="150" required="" id="id_username"></p>
+<p><label for="id_email">Email:</label> <input type="email" class='form-control' name="email" value="sarojsharma11111@gmail.com" required="" id="id_email"></p>
+<p><label for="id_Contactno">Contact no.</label> <input type="number" class='form-control' name="Contactno" value="0" required="" id="id_Contactno"></p>
+
+<input type="submit" value="Update">
+<a href="/logout/">Logout</a>
+   </div>
 </form>
+    </div>
+  </div>
 </div>
 <br><br>
 

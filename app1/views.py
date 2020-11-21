@@ -61,6 +61,7 @@ def profile(request):
 
     return render(request, 'profile.html', context)   
 
+
 def contactus(request):
     return render(request,'contact.html')  
 
