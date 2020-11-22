@@ -116,7 +116,10 @@ def userprofile(request):
 
 def userlogout(request):
     logout(request)
-    return HttpResponseRedirect('/login')    
+    return HttpResponseRedirect('/login')   
+
+
+     CTRL + F5  
 '''
 
 
