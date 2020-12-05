@@ -1,0 +1,32 @@
+.bg{
+   background-color: azure;
+}
+
+
+#loga{
+    background: #fff;
+    padding: 30px;
+    border: 3px solid white;
+    margin-top: 0px;
+    margin-right: 400px;
+    margin-left:200px;
+    margin-bottom: 20px;
+    border-radius: 80px;
+    box-shadow: 0px 0px 5px 0px #000;
+    
+}
+
+#logb{
+    background: #fff;
+    padding: 30px;
+    border: 3px solid green;
+    margin-top: 0px;
+    margin-right: 350px;
+    margin-left: 350px;
+
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #000;
+    
+}
